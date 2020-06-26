@@ -1,12 +1,37 @@
-import React from 'react';
-// import logo from './logo.svg';
+import React, { Component } from 'react';
+import './App.css';
 
-function App() {
-  const aaa = 'Ooooops!';
-  const dom = <h1 className="foo" onClick={()=>{console.log("clicked.")}}>Hello, world {aaa}.</h1>;
+// class App extends Component {
+//   render() {
+//     return (
+//       <React.Fragment>
+//         <label htmlFor="bar">bar</label>
+//         <input type="text" id="bar" onChange={() => {console.log("I'm clicked!")}} />
+//       </React.Fragment>
+//     )
+//   }
+// }
+
+const App = () => {
   return (
-    dom
-  );
+    <React.Fragment>
+      <label htmlFor="bar">bar</label>
+      <input type="text" id="bar" onChange={() => {console.log("I'm clicked!")}} />
+      <Cat />
+      <Cat />
+      <Cat />
+      <Cat />
+      
+    </React.Fragment>
+  )
+}
+
+const Cat = () => {
+  return (
+    <div>
+      Meow!!
+    </div>
+  )
 }
 
 export default App;
